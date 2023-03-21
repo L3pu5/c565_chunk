@@ -56,8 +56,6 @@ from math import floor
 class c565_chunk:
     width       = 0
     height      = 0
-    chunk_x     = 0
-    chunk_y     = 0
     buffer      = b""
 
     def __init__(self, x, y, width, height, buffer) -> None:
