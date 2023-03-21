@@ -103,7 +103,7 @@ class c565_chunk_image:
     
     # Writing to Files
     def accept_buffer(self, buffer: bytes):
-        BUFFER = buffer
+        self.BUFFER = buffer
 
     # Baking for image c565 images
     # A buffer for writing in c565 format MUST be top-left 0,0 image data
