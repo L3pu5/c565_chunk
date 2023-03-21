@@ -218,7 +218,7 @@ class c565_chunk_image:
     
     def read_chunk_as_chunk(self, chunk_offset: int) -> c565_chunk:
         self.INDEX = chunk_offset
-        return c565_chunk(self.get_index_x(), self.get_index_y(), self.CHUNK_H_PX, self.CHUNK_W_PX, self.read_chunk(chunk_offset))
+        return c565_chunk(self.get_index_x(), self.get_index_y(), self.CHUNK_W_PX, self.CHUNK_H_PX, self.read_chunk(chunk_offset))
     
     def __str__(self) -> str:
         return f"IMAGE :: {self.IMAGE_W_PX}x{self.IMAGE_H_PX} CHUNKS :: {self.CHUNK_W_PX}x{self.CHUNK_H_PX} BUFF :: {self.CHUNK_COL_CNT}"
