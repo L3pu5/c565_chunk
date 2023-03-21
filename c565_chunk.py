@@ -114,9 +114,9 @@ class c565_chunk_image:
     def bake_with_dimensions(self, chunk_width: int, chunk_height: int, chunk_size_in_bytes: int):
         #Bake chunk dimensions into the format if that are allowed.
         # The chunk dimensions MUST evenly divide the width and height
-        if(chunk_width % self.IMAGE_W_PX != 0):
+        if(self.IMAGE_W_PX % chunk_width != 0):
             raise Exception(f"Invalid width, does not divide the image. {chunk_width} requested against {self.IMAGE_W_PX}. Check dimensions")
-        if(chunk_height % self.IMAGE_H_PX != 0):
+        if(self.IMAGE_H_PX % chunk_height != 0):
             raise Exception(f"Invalid height, does not divide the image. {chunk_height} requested against {self.IMAGE_H_PX}. Check dimensions")
 
         self.CHUNK_H_PX = chunk_height
@@ -224,8 +224,3 @@ class c565_chunk_image:
     
     def __str__(self) -> str:
         return f"IMAGE :: {self.IMAGE_W_PX}x{self.IMAGE_H_PX} CHUNKS :: {self.CHUNK_W_PX}x{self.CHUNK_H_PX} BUFF :: {self.CHUNK_COL_CNT}"
-
-if __name__ == "__main__":
-    img = c565_chunk_image()
-    img.read_from_image_file("./testfile.c565")
-    img.bake_to_file("./regurgitate.c565")
