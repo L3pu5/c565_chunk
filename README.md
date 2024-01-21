@@ -11,17 +11,17 @@
 
    .c565 specifications.
    
-   |Attribute       | Offset            | Length    | Preset|
+   | Attribute       | Offset            | Length    | Preset|
    | --  | -- | -- |  
-   Magic numbers   | 0                 | 4         | C565
-   IMAGE_W_PX      | 4                 | 4         | 0000
-   IMAGE_H_PX      | 8                 | 4         | 0000
-   CHUNK_W_PX      | 12                | 4         | 0000
-   CHUNK_H_PX      | 16                | 4         | 0000
-   CHUNK_COL_CNT   | 20                | 2         | 00
-   CHUNK_SZ(byte)  | 22                | 10        | 0000 0000 00            
-   Chunk 0         | 32                | CHUNK_SZ  | 0*CHUNK_SZ
-   Chunk n         | 32+(n\*Chunk_SZ)   | CHUNK_SZ | 0*CHUNK_SZ
+   | Magic numbers   | 0                 | 4         | C565 |
+   | IMAGE_W_PX      | 4                 | 4         | 0000 |
+   | IMAGE_H_PX      | 8                 | 4         | 0000 |
+   | CHUNK_W_PX      | 12                | 4         | 0000 |
+   | CHUNK_H_PX      | 16                | 4         | 0000 |
+   | CHUNK_COL_CNT   | 20                | 2         | 00 |
+   | CHUNK_SZ(byte)  | 22                | 10        | 0000 0000 00 |            
+   | Chunk 0         | 32                | CHUNK_SZ  | 0*CHUNK_SZ |
+   | Chunk n         | 32+(n\*Chunk_SZ)   | CHUNK_SZ | 0*CHUNK_SZ |
 
    Chunks are, by definition, sections of X,Y grids to be drawn from
    The top left to the bottom right
