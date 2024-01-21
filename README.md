@@ -12,7 +12,7 @@
    .c565 specifications.
    
    | Attribute       | Offset            | Length    | Preset|
-   | --  | -- | -- |  
+   | --  | -- | -- | -- |
    | Magic numbers   | 0                 | 4         | C565 |
    | IMAGE_W_PX      | 4                 | 4         | 0000 |
    | IMAGE_H_PX      | 8                 | 4         | 0000 |
